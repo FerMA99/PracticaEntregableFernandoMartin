@@ -1,0 +1,12 @@
+name: rnaseq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - cutadapt
+  - star
+  - multiqc
+  - fastqc
+  - seqkit
+prefix: /home/Fer/miniforge3/envs/rnaseq
