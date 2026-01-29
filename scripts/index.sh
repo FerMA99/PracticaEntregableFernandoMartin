@@ -6,3 +6,17 @@
 
 # STAR --runThreadN 4 --runMode genomeGenerate --genomeDir <outdir> \
 # --genomeFastaFiles <genomefile> --genomeSAindexNbases 9
+
+# Asignamos los argumentos a variables con nombres claros
+
+genomefile=$1
+outdir=$2
+
+echo "Creando directorio para el índice: $outdir"
+mkdir -p "$outdir"
+
+echo "Indexando $genomefile con STAR..."
+
+# Ejecutamos STAR
+STAR --runThreadN 4 --runMode genomeGenerate --genomeDir "$outdir" \
+--genomeFastaFiles "$genomefile" --genomeSAindexNbases 9
